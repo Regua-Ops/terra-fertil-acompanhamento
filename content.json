@@ -1,0 +1,60 @@
+{
+  "updatedAt": "Atualizado em sexta, 23 de outubro de 2026",
+  "week": {
+    "done": "Método de trabalho e rastreio do projeto montados. Acesso à conta de anúncios recebido. Leitura das campanhas atuais iniciada.",
+    "blocked": "Login do Wati ainda não chegou; sem ele, a parte do WhatsApp fica parada.",
+    "next": "Sexta 23/10: leitura completa das campanhas atuais — o que está acertando, o que está errando, o que o período de eleição distorce."
+  },
+  "dependencies": [
+    {
+      "title": "Login do Wati",
+      "owner": "Pedro",
+      "asked": "Pedido em 19/10",
+      "purpose": "Libera a investigação do lado do WhatsApp.",
+      "status": "Pendente"
+    },
+    {
+      "title": "Planilha de orgânico 2024 a out/2026",
+      "owner": "Pedro",
+      "asked": "Pedido em 19/10",
+      "purpose": "Base para separar pago de orgânico.",
+      "status": "Pendente"
+    },
+    {
+      "title": "Dicionário de status do ERP (o que conta como venda confirmada, cancelada, estornada)",
+      "owner": "Tiago, via Pedro",
+      "asked": "Pedido em 21/10",
+      "purpose": "Sem isso nenhum número de venda entra no diagnóstico.",
+      "status": "Pendente"
+    }
+  ],
+  "deliveries": [
+    {
+      "title": "Leitura das campanhas atuais",
+      "date": "Sexta 23/10",
+      "status": "Em preparação",
+      "link": ""
+    }
+  ],
+  "phases": [
+    {
+      "title": "Diagnóstico",
+      "detail": "Por que os números da Meta e do WhatsApp não batem.",
+      "current": true
+    },
+    {
+      "title": "Qualidade",
+      "detail": "Que lead vale a pena e onde a venda é registrada."
+    },
+    {
+      "title": "Solução",
+      "detail": "O que construir, só depois de provar o que falta."
+    },
+    {
+      "title": "Piloto",
+      "detail": "Testar com orçamento e critério de parada."
+    }
+  ],
+  "closes": "Termina quando soubermos, com evidência, quanto do que chega no WhatsApp vem de anúncio e quanto não vem.",
+  "contact": "Vitor Botelho · (81) 95168-4016"
+}
