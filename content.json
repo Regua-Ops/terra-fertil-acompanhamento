@@ -1,17 +1,17 @@
 {
-  "updatedAt": "Atualizado em sexta, 23 de outubro de 2026",
+  "updatedAt": "Atualizado em quinta, 22 de outubro de 2026",
   "week": {
-    "done": "Método de trabalho e rastreio do projeto montados. Acesso à conta de anúncios recebido. Leitura das campanhas atuais iniciada.",
-    "blocked": "Login do Wati ainda não chegou; sem ele, a parte do WhatsApp fica parada.",
-    "next": "Sexta 23/10: leitura completa das campanhas atuais — o que está acertando, o que está errando, o que o período de eleição distorce."
+    "done": "Método de trabalho e rastreio do projeto montados. Portal do cliente publicado. Acesso à conta de anúncios recebido. Acesso à API do WATI recebido e testado em leitura.",
+    "blocked": "Login ao painel do WATI ainda não verificado; a API já responde. Planilha de orgânico e dicionário de status do ERP continuam pendentes.",
+    "next": "Próxima atualização: sexta-feira, 23/10/2026. Situação da preparação técnica, acessos e próximos passos do diagnóstico. A análise de campanhas começará após a autorização formal de leitura e a validação dos acessos necessários."
   },
   "dependencies": [
     {
-      "title": "Login do Wati",
+      "title": "Acesso ao WATI",
       "owner": "Pedro",
       "asked": "Pedido em 19/10",
       "purpose": "Libera a investigação do lado do WhatsApp.",
-      "status": "Pendente"
+      "status": "API recebida; login ao painel não verificado"
     },
     {
       "title": "Planilha de orgânico 2024 a out/2026",
@@ -30,7 +30,7 @@
   ],
   "deliveries": [
     {
-      "title": "Leitura das campanhas atuais",
+      "title": "Situação da preparação técnica e próximos passos do diagnóstico",
       "date": "Sexta 23/10",
       "status": "Em preparação",
       "link": ""
