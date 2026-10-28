@@ -1,9 +1,9 @@
 {
-  "updatedAt": "Atualizado em quinta, 22 de outubro de 2026",
+  "updatedAt": "Atualizado em segunda-feira, 26 de outubro de 2026",
   "week": {
-    "done": "Método de trabalho e rastreio do projeto montados. Portal do cliente publicado. Acesso à conta de anúncios recebido. Acesso à API do WATI recebido e testado em leitura.",
-    "blocked": "Login ao painel do WATI ainda não verificado; a API já responde. Planilha de orgânico e dicionário de status do ERP continuam pendentes.",
-    "next": "Próxima atualização: sexta-feira, 23/10/2026. Situação da preparação técnica, acessos e próximos passos do diagnóstico. A análise de campanhas começará após a autorização formal de leitura e a validação dos acessos necessários."
+    "done": "A preparação documental foi concluída. A governança do projeto foi atualizada e a reunião de alinhamento com Pedro e Fernando permitiu detalhar as necessidades de rastreamento, atendimento e resultados comerciais.",
+    "blocked": "O diagnóstico técnico depende das autorizações de acesso aos sistemas reais. Permanecem pendentes de confirmação as informações necessárias do WATI e as fontes comerciais utilizadas para relacionar atendimentos a vendas.",
+    "next": "Finalizar a apresentação dos documentos no portal e encaminhá-los à Terra Fértil para conferência. Após as autorizações necessárias, iniciar a investigação da origem das conversas e das divergências entre Meta Ads e WATI."
   },
   "dependencies": [
     {
@@ -30,8 +30,8 @@
   ],
   "deliveries": [
     {
-      "title": "Situação da preparação técnica e próximos passos do diagnóstico",
-      "date": "Sexta 23/10",
+      "title": "Material documental para avaliação de Pedro e Fernando",
+      "date": "Data de envio ainda não confirmada",
       "status": "Em preparação",
       "link": ""
     }
