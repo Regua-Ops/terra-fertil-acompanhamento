@@ -3,7 +3,7 @@
   "week": {
     "done": "As verificações iniciais dos ativos Meta Ads e dos recursos nativos do WATI foram concluídas. A análise da estrutura e dos investimentos de mídia também foi concluída, com as limitações documentadas. O diagnóstico identificou possibilidades técnicas de rastreamento, sem alterar campanhas ou processos de atendimento.",
     "blocked": "Ainda não foi possível comprovar retrospectivamente a associação entre cada anúncio e sua conversa correspondente no WhatsApp. A reconciliação Meta Ads × WATI permanece dependente de evidências adicionais. Também faltam definições comerciais validadas para qualificação, orçamento e venda.",
-    "next": "Consolidar as definições comerciais para validação da Terra Fértil e organizar as fontes e definições dos indicadores disponíveis. Na frente de mídia, aprofundar a análise das campanhas da V4 e colocar novas campanhas no ar em paralelo às atuais, com prazo previsto até 06/11/2026, condicionado à conclusão dessa análise."
+    "next": "Consolidar as definições comerciais para validação da Terra Fértil e organizar as fontes e definições dos indicadores disponíveis. Na frente de mídia, aprofundar a análise das campanhas da V4. Novas campanhas serão propostas após a análise da V4 e dependerão de aprovação específica."
   },
   "dependencies": [
     {
@@ -56,5 +56,5 @@
     }
   ],
   "closes": "Termina quando soubermos, com evidência, quanto do que chega no WhatsApp vem de anúncio e quanto não vem.",
-  "contact": "Vitor Botelho · (81) 95168-4016"
+  "contact": "Contato institucional: a definir"
 }
