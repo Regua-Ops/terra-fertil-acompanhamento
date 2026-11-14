@@ -62,15 +62,15 @@ test("consistência: intro cita data diferente da referência; duas fases atuais
 test("contato: só no campo contact e só os listados na política", () => {
   const pol = structuredClone(politica);
   pol.contatosPermitidos.emails = ["contato@exemplo.com.br"];
-  pol.contatosPermitidos.telefones = ["(11) 4000-1234"];
+  pol.contatosPermitidos.telefones = ["(11) 90000-0001"];
   const c = clone();
-  c.contact = "Contato institucional: contato@exemplo.com.br · (11) 4000-1234";
+  c.contact = "Contato institucional: contato@exemplo.com.br · (11) 90000-0001";
   assert.deepEqual(rodar(c, {}, pol).erros, []);
-  c.contact = "Contato: outra.pessoa@exemplo.com.br · (81) 99999-1234";
+  c.contact = "Contato: outra.pessoa@exemplo.com.br · (11) 90000-0002";
   const r = regras(rodar(c, {}, pol));
   assert.ok(r.includes("contact:email") && r.includes("contact:telefone"));
   const d = clone();
-  d.week.blocked = "Falar com contato@exemplo.com.br ou (11) 4000-1234.";
+  d.week.blocked = "Falar com contato@exemplo.com.br ou (11) 90000-0001.";
   const r2 = regras(rodar(d, {}, pol));
   assert.ok(r2.includes("week.blocked:email") && r2.includes("week.blocked:telefone"), "contato listado também é erro fora de contact");
 });
@@ -83,7 +83,7 @@ test("números legítimos passam: datas, versões, porcentagens, anos, CNPJ inst
 
 test("conteúdo concreto: telefone no texto, CPF, token, variável interna, HTML", () => {
   const c = clone();
-  c.week.done = "Ligue para (81) 98888-7777 ou 81988887777.";
+  c.week.done = "Ligue para (11) 90000-0003 ou 11900000004.";
   c.week.blocked = "CPF 123.456.789-09 do responsável.";
   c.week.next = "Use gho_abcdefghijklmnopqrstuvwxyz0123 e SESSION_SECRET para entrar.";
   c.summary = "Veja <b>isto</b> &amp; aquilo";
@@ -94,10 +94,10 @@ test("conteúdo concreto: telefone no texto, CPF, token, variável interna, HTML
 
 test("a mensagem de erro não repete o dado sensível inteiro", () => {
   const c = clone();
-  c.week.done = "Ligue para (81) 98888-7777.";
+  c.week.done = "Ligue para (11) 90000-0003.";
   c.week.blocked = "CPF 123.456.789-09.";
   const msgs = rodar(c).erros.map((x) => x.mensagem).join(" | ");
-  assert.ok(!msgs.includes("98888") && !msgs.includes("456.789"), msgs);
+  assert.ok(!msgs.includes("90000") && !msgs.includes("456.789"), msgs);
 });
 
 test("links: só https e só os permitidos; portal profundo exige login e é bloqueado", () => {
