@@ -137,3 +137,9 @@ test("bloqueios definidos pelo owner na política viram erro", () => {
   c.week.done = "Atendemos a Dona Maria em outubro.";
   assert.ok(regras(rodar(c, {}, pol)).includes("week.done:nome-cliente-final"));
 });
+
+test("dependência 'A validar' é aceita (neutra, sem atribuir atraso)", () => {
+  const c = clone();
+  c.dependencies[0].status = "A validar";
+  assert.deepEqual(rodar(c).erros, []);
+});

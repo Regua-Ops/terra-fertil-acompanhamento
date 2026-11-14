@@ -30,7 +30,7 @@ Se o `content.json` no ar estiver inválido, a página mostra um aviso claro de 
 | `phases[]` (uma com `"current": true`), `closes` | "Onde estamos" |
 | `week.done / blocked / next` | "Esta semana" (Fechou / Travou / Próximo) |
 | `campaigns` | "Planejamento de novas campanhas" |
-| `dependencies[]` (status: Pendente · Em andamento · Recebido) | "O que depende de vocês" |
+| `dependencies[]` (status: A validar · Pendente · Em andamento · Recebido; "A validar" é neutro, cinza) | "O que depende de vocês" |
 | `deliveries[]` (status: Planejada · Em preparação · Entregue; `link` vazio ou https permitido) | "Próxima entrega" |
 | `contact` | rodapé |
 

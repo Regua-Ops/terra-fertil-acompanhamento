@@ -2,7 +2,7 @@
 // Sem dependências: roda com o Node que já vem no GitHub Actions e localmente.
 
 export const TONS = ["concluido", "andamento", "pendente"];
-export const STATUS_DEPENDENCIA = ["Pendente", "Em andamento", "Recebido"];
+export const STATUS_DEPENDENCIA = ["A validar", "Pendente", "Em andamento", "Recebido"];
 export const STATUS_ENTREGA = ["Planejada", "Em preparação", "Entregue"];
 
 const ISO = /^\d{4}-\d{2}-\d{2}$/;
