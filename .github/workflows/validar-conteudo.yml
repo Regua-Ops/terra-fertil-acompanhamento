@@ -1,0 +1,57 @@
+# Em todo push e pull request: valida o content.json e gera a prévia fiel da página. NÃO publica nada.
+name: Validar conteúdo e gerar prévia
+
+on:
+  pull_request:
+  push:
+    branches: ["**"]
+
+concurrency:
+  group: validar-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Testes do validador
+        run: node --test "tests/*.test.mjs"
+      - name: Versão de comparação
+        run: |
+          if [ "$GITHUB_REF" = "refs/heads/main" ]; then REF="HEAD^"; else REF="origin/main"; fi
+          git show "$REF:content.json" > /tmp/base.json 2>/dev/null || rm -f /tmp/base.json
+      - name: Validar content.json
+        run: node scripts/validar-conteudo.mjs content.json --base /tmp/base.json
+      - name: Gerar prévia da página
+        if: always()
+        continue-on-error: true
+        run: node scripts/gerar-previa.mjs content.json _previa
+      - name: Guardar a prévia
+        id: previa
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: previa-pagina
+          path: _previa/previa.html
+          if-no-files-found: ignore
+          retention-days: 14
+      - name: Como ver a prévia
+        if: always() && steps.previa.outputs.artifact-url != ''
+        run: |
+          {
+            echo "### 👁️ Prévia da página"
+            echo ""
+            echo "Baixe [previa-pagina]($ARTIFACT_URL) (zip), extraia e abra **previa.html** no navegador: é a página real com este conteúdo, marcada como PRÉVIA."
+            echo "Publicar só acontece depois do merge, em **Actions › Publicar Status Page › Run workflow**."
+          } >> "$GITHUB_STEP_SUMMARY"
+        env:
+          ARTIFACT_URL: ${{ steps.previa.outputs.artifact-url }}

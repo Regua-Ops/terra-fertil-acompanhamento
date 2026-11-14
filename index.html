@@ -134,6 +134,12 @@ footer{padding:32px 0 40px;border-top:1px solid var(--line);color:var(--ink-fain
 .campaigns-condition{padding-top:18px;border-top:1px solid var(--line)}
 @media(min-width:960px){.campaigns-body{grid-column:4 / -1}}
 @media(max-width:480px){.campaigns-body{padding:20px}}
+.carga{padding:64px 20px;text-align:center;color:var(--ink-soft)}
+.erro-carga{width:min(calc(100% - 40px),720px);margin:48px auto;padding:24px;border:1px solid var(--line-strong);border-left:4px solid var(--alert);border-radius:var(--radius-medium);background:var(--white)}
+.erro-carga h2{margin:0 0 12px;font-size:20px;color:var(--alert)}
+.erro-carga p{max-width:65ch;margin-top:12px;color:var(--ink-soft)}
+.erro-carga .erro-detalhe{font-size:13px;color:var(--ink-faint)}
+.faixa-previa{position:sticky;top:0;z-index:10;padding:10px 20px;border-bottom:1px solid #e3c36b;background:#fff4d6;color:#4a3a00;font-size:14px;font-weight:600;text-align:center}
 </style>
 </head>
 <body>
@@ -162,51 +168,20 @@ footer{padding:32px 0 40px;border-top:1px solid var(--line);color:var(--ink-fain
     </div>
     <div class="header-title">
       <h1>Tráfego e atribuição de leads</h1>
-      <p class="date" id="updatedAt">Referência: 31/10/2026</p>
+      <p class="date" id="updatedAt"></p>
     </div>
-    <p class="hero-summary">As verificações iniciais de Meta Ads e WATI já foram concluídas, assim como a análise de mídia, com limitações documentadas. Veja os avanços acumulados e o que falta esclarecer para seguir.</p>
+    <p class="hero-summary" id="summary"></p>
   </div>
 </header>
 
-<main>
+<main id="conteudo" hidden>
   <section class="achievements" aria-labelledby="achievements-heading">
     <div class="wrap">
       <h2 id="achievements-heading">O que já foi realizado</h2>
       <div class="achievements-body">
-        <p class="achievements-intro">Trabalho acumulado até 31/10/2026. Cada frente apresenta o avanço alcançado e seus limites.</p>
-        <ul class="achievement-list">
-          <li class="achievement-card">
-            <span class="status received">Verificação concluída</span>
-            <h3>Ativos Meta Ads verificados</h3>
-            <p>Concluímos as verificações iniciais dos ativos de anúncios que integram o diagnóstico de mídia e rastreamento.</p>
-          </li>
-          <li class="achievement-card">
-            <span class="status received">Verificação concluída</span>
-            <h3>Recursos nativos do WATI analisados</h3>
-            <p>Concluímos as verificações iniciais dos recursos nativos do WATI, como parte da análise do rastreamento das conversas no WhatsApp.</p>
-          </li>
-          <li class="achievement-card">
-            <span class="status received">Concluída com limitações</span>
-            <h3>Estrutura e investimentos de mídia analisados</h3>
-            <p>Concluímos a análise da estrutura de mídia e dos investimentos, registrando as limitações que precisam acompanhar a leitura dos resultados.</p>
-          </li>
-          <li class="achievement-card">
-            <span class="status received">Possibilidades identificadas</span>
-            <h3>Caminhos técnicos de rastreamento identificados</h3>
-            <p>O diagnóstico identificou possibilidades técnicas para o rastreamento. Esse levantamento foi realizado sem alterar campanhas ou processos de atendimento.</p>
-          </li>
-          <li class="achievement-card">
-            <span class="status received">Planejamento concluído</span>
-            <h3>Planejamento de migração elaborado</h3>
-            <p>A etapa de planejamento da migração foi concluída. Este avanço corresponde ao planejamento; a execução da migração é uma etapa distinta.</p>
-          </li>
-          <li class="achievement-card">
-            <span class="status prep">Preparação iniciada</span>
-            <h3>Preparação documental da qualidade comercial</h3>
-            <p>Iniciamos a preparação documental dessa frente. O próximo passo é consolidar as definições de qualificação, passagem SDR → closer e status comerciais para validação da Terra Fértil.</p>
-          </li>
-        </ul>
-        <p class="achievement-note"><strong>O que essas análises já esclareceram:</strong> há possibilidades técnicas de rastreamento, mas a associação retrospectiva entre cada anúncio e sua conversa no WhatsApp ainda depende de evidências adicionais. O diagnóstico permanece em andamento.</p>
+        <p class="achievements-intro" id="achievementsIntro"></p>
+        <ul class="achievement-list" id="achievements"></ul>
+        <p class="achievement-note" id="achievementsNote"></p>
       </div>
     </div>
   </section>
@@ -214,25 +189,8 @@ footer{padding:32px 0 40px;border-top:1px solid var(--line);color:var(--ink-fain
   <section aria-labelledby="where">
     <div class="wrap">
       <h2 id="where">Onde estamos</h2>
-      <ol class="phase-list" id="phases">
-      <li class="current" aria-current="step">
-        <div class="phase-marker"><span>1</span></div>
-        <div class="phase-copy"><em>Fase atual</em><strong>Diagnóstico</strong><p>Em andamento, com limitações documentadas.</p></div>
-      </li>
-      <li>
-        <div class="phase-marker"><span>2</span></div>
-        <div class="phase-copy"><strong>Qualidade comercial</strong><p>Preparação documental iniciada, sem conclusão formal da fase.</p></div>
-      </li>
-      <li>
-        <div class="phase-marker"><span>3</span></div>
-        <div class="phase-copy"><strong>Solução</strong><p>Não iniciada.</p></div>
-      </li>
-      <li>
-        <div class="phase-marker"><span>4</span></div>
-        <div class="phase-copy"><strong>Piloto</strong><p>Não iniciado.</p></div>
-      </li>
-      </ol>
-      <p class="closes" id="closes">Termina quando soubermos, com evidência, quanto do que chega no WhatsApp vem de anúncio e quanto não vem.</p>
+      <ol class="phase-list" id="phases"></ol>
+      <p class="closes" id="closes"></p>
     </div>
   </section>
 
@@ -240,9 +198,9 @@ footer{padding:32px 0 40px;border-top:1px solid var(--line);color:var(--ink-fain
     <div class="wrap">
       <h2 id="week">Esta semana</h2>
       <div class="week-grid">
-        <article class="done"><h3>Fechou</h3><p id="weekDone">As verificações iniciais dos ativos Meta Ads e dos recursos nativos do WATI foram concluídas. A análise da estrutura e dos investimentos de mídia também foi concluída, com as limitações documentadas. O diagnóstico identificou possibilidades técnicas de rastreamento, sem alterar campanhas ou processos de atendimento.</p></article>
-        <article class="blocked"><h3>Travou</h3><p id="weekBlocked">Ainda não foi possível comprovar retrospectivamente a associação entre cada anúncio e sua conversa correspondente no WhatsApp. A reconciliação Meta Ads × WATI permanece dependente de evidências adicionais. Também faltam definições comerciais validadas para qualificação, orçamento e venda.</p></article>
-        <article class="next"><h3>Próximo</h3><p id="weekNext">Consolidar as definições comerciais para validação da Terra Fértil e organizar as fontes e definições dos indicadores disponíveis. Na frente de mídia, aprofundar a análise das campanhas da V4. Novas campanhas serão propostas após a análise da V4 e dependerão de aprovação específica.</p></article>
+        <article class="done"><h3>Fechou</h3><p id="weekDone"></p></article>
+        <article class="blocked"><h3>Travou</h3><p id="weekBlocked"></p></article>
+        <article class="next"><h3>Próximo</h3><p id="weekNext"></p></article>
       </div>
     </div>
   </section>
@@ -250,59 +208,33 @@ footer{padding:32px 0 40px;border-top:1px solid var(--line);color:var(--ink-fain
   <section class="campaigns" aria-labelledby="campaigns-heading">
     <div class="wrap">
       <h2 id="campaigns-heading">Planejamento de novas campanhas</h2>
-      <div class="campaigns-body">
-        <div class="campaigns-meta">
-          <span class="status prep">Planejado</span>
-        </div>
-        <p>Novas campanhas serão propostas após a análise da V4 e dependerão de aprovação específica.</p>
-        <ol class="campaigns-steps">
-          <li>
-            <strong>Analisar a fundo as campanhas da V4</strong>
-            <p>Entender os padrões das campanhas atuais e definir quais devem ser replicados e quais devem ser descartados na preparação das novas campanhas.</p>
-          </li>
-          <li>
-            <strong>Propor novas campanhas para aprovação</strong>
-            <p>Usar as conclusões dessa análise para preparar propostas de campanhas, sem ativação antes de aprovação específica.</p>
-          </li>
-        </ol>
-        <p class="campaigns-condition">A ativação de campanhas depende de autorização operacional específica.</p>
-      </div>
+      <div class="campaigns-body" id="campaigns"></div>
     </div>
   </section>
 
   <section aria-labelledby="depends">
     <div class="wrap">
       <h2 id="depends">O que depende de vocês</h2>
-      <ul class="task-list" id="dependencies">
-      <li>
-        <div class="task-main"><strong>Confirmar critérios de qualificação de leads</strong><div class="task-meta"><span class="owner">Responsável: Terra Fértil</span><span class="asked">Validação pendente</span></div></div>
-        <p>Definir os critérios comerciais de qualificação.</p><span class="status pending">Pendente</span>
-      </li>
-      <li>
-        <div class="task-main"><strong>Confirmar passagem SDR → closer e status comerciais</strong><div class="task-meta"><span class="owner">Responsável: Terra Fértil</span><span class="asked">Validação pendente</span></div></div>
-        <p>Validar a passagem entre as etapas e seus status.</p><span class="status pending">Pendente</span>
-      </li>
-      <li>
-        <div class="task-main"><strong>Validar o dicionário de status do ERP</strong><div class="task-meta"><span class="owner">Responsável: Terra Fértil</span><span class="asked">Validação pendente</span></div></div>
-        <p>Incluir a definição de venda confirmada.</p><span class="status pending">Pendente</span>
-      </li>
-      </ul>
+      <ul class="task-list" id="dependencies"></ul>
     </div>
   </section>
 
   <section aria-labelledby="deliveries-h">
     <div class="wrap">
       <h2 id="deliveries-h">Próxima entrega</h2>
-      <ul class="task-list deliveries" id="deliveries">
-      <li>
-        <div class="task-main"><strong>Definições comerciais para validação</strong><span class="owner">Envio ainda não confirmado</span></div>
-        <p><span class="nolink">As definições serão disponibilizadas após sua consolidação.</span></p>
-        <span class="status prep">Em preparação</span>
-      </li>
-      </ul>
+      <ul class="task-list deliveries" id="deliveries"></ul>
     </div>
   </section>
 </main>
+
+<div class="carga" id="carregando" role="status">Carregando o andamento do projeto…</div>
+<div class="erro-carga" id="erro" role="alert" hidden>
+  <h2>Não foi possível carregar o conteúdo atualizado</h2>
+  <p>O andamento desta página vem de um arquivo que não pôde ser lido agora. Para não apresentar uma posição desatualizada como se fosse a atual, nenhuma informação anterior é exibida.</p>
+  <p>Recarregue a página em alguns instantes. Se o problema continuar, avise a equipe da Régua.</p>
+  <p class="erro-detalhe">Detalhe técnico: <code id="erroDetalhe"></code></p>
+</div>
+<noscript><div class="carga">Esta página precisa de JavaScript para exibir o andamento do projeto. Ative-o ou fale com a equipe da Régua.</div></noscript>
 
 <footer>
   <div class="wrap footer-inner">
@@ -318,115 +250,116 @@ footer{padding:32px 0 40px;border-top:1px solid var(--line);color:var(--ink-fain
 <path d="M527.0400000000001 1617.0600000000002H715.2L936.9600000000002 1951.9400000000003H683.84Z" transform="translate(1471,2050) scale(1,-1)"></path>
 </g></svg>
     </div>
-    <span class="contact" id="contact">Contato institucional: a definir</span>
+    <span class="contact" id="contact"></span>
   </div>
 </footer>
 
 
+<!-- CONTEUDO-PREVIA -->
 <script>
-// Conteúdo padrão: mantém a página disponível se content.json não carregar.
-const content = {
-  "updatedAt": "Referência: 31/10/2026",
-  "week": {
-    "done": "As verificações iniciais dos ativos Meta Ads e dos recursos nativos do WATI foram concluídas. A análise da estrutura e dos investimentos de mídia também foi concluída, com as limitações documentadas. O diagnóstico identificou possibilidades técnicas de rastreamento, sem alterar campanhas ou processos de atendimento.",
-    "blocked": "Ainda não foi possível comprovar retrospectivamente a associação entre cada anúncio e sua conversa correspondente no WhatsApp. A reconciliação Meta Ads × WATI permanece dependente de evidências adicionais. Também faltam definições comerciais validadas para qualificação, orçamento e venda.",
-    "next": "Consolidar as definições comerciais para validação da Terra Fértil e organizar as fontes e definições dos indicadores disponíveis. Na frente de mídia, aprofundar a análise das campanhas da V4. Novas campanhas serão propostas após a análise da V4 e dependerão de aprovação específica."
-  },
-  "dependencies": [
-    {
-      "title": "Confirmar critérios de qualificação de leads",
-      "owner": "Terra Fértil",
-      "asked": "Validação pendente",
-      "purpose": "Definir os critérios comerciais de qualificação.",
-      "status": "Pendente"
-    },
-    {
-      "title": "Confirmar passagem SDR → closer e status comerciais",
-      "owner": "Terra Fértil",
-      "asked": "Validação pendente",
-      "purpose": "Validar a passagem entre as etapas e seus status.",
-      "status": "Pendente"
-    },
-    {
-      "title": "Validar o dicionário de status do ERP",
-      "owner": "Terra Fértil",
-      "asked": "Validação pendente",
-      "purpose": "Incluir a definição de venda confirmada.",
-      "status": "Pendente"
+// O texto desta página vem TODO de content.json. Aqui fica só a apresentação.
+// Se o arquivo não carregar ou estiver fora do formato, mostra o erro: nunca uma cópia antiga.
+(function () {
+  "use strict";
+  const $ = (id) => document.getElementById(id);
+  const TOM = { concluido: "received", andamento: "prep", pendente: "pending" };
+  const classeStatus = (s) => (s === "Recebido" || s === "Entregue" ? "received" : s === "Pendente" ? "pending" : "prep");
+  const dataBR = (iso) => { const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso); if (!m) throw new Error("referenceDate fora do formato AAAA-MM-DD"); return `${m[3]}/${m[2]}/${m[1]}`; };
+  const texto = (v, campo) => { if (typeof v !== "string") throw new Error(`campo ${campo} ausente ou não é texto`); return v; };
+  const lista = (v, campo) => { if (!Array.isArray(v)) throw new Error(`campo ${campo} ausente ou não é lista`); return v; };
+  const tom = (v, campo) => { if (!(v in TOM)) throw new Error(`campo ${campo} com valor inválido`); return TOM[v]; };
+  function el(tag, props, ...filhos) {
+    const n = document.createElement(tag);
+    for (const [k, v] of Object.entries(props || {})) {
+      if (v == null || v === false) continue;
+      if (k === "class") n.className = v; else n.setAttribute(k, v === true ? "" : v);
     }
-  ],
-  "deliveries": [
-    {
-      "title": "Definições comerciais para validação",
-      "date": "Envio ainda não confirmado",
-      "status": "Em preparação",
-      "link": ""
-    }
-  ],
-  "phases": [
-    {
-      "title": "Diagnóstico",
-      "detail": "Em andamento, com limitações documentadas.",
-      "current": true
-    },
-    {
-      "title": "Qualidade comercial",
-      "detail": "Preparação documental iniciada, sem conclusão formal da fase."
-    },
-    {
-      "title": "Solução",
-      "detail": "Não iniciada."
-    },
-    {
-      "title": "Piloto",
-      "detail": "Não iniciado."
-    }
-  ],
-  "closes": "Termina quando soubermos, com evidência, quanto do que chega no WhatsApp vem de anúncio e quanto não vem.",
-  "contact": "Contato institucional: a definir"
-};
+    for (const f of filhos.flat()) if (f != null) n.append(f);
+    return n;
+  }
+  const chip = (cls, rotulo) => el("span", { class: `status ${cls}` }, rotulo);
 
-function render(content){
-  const $ = id => document.getElementById(id);
-  const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-  const statusClass = s => (s === "Recebido" || s === "Entregue") ? "received" : (s === "Pendente" ? "pending" : "prep");
+  // Monta tudo FORA da página; só se tudo der certo é que substitui o conteúdo (nada de meia-atualização).
+  function montar(c) {
+    if (c === null || typeof c !== "object" || c.schemaVersion !== 2) throw new Error("formato do arquivo não reconhecido (schemaVersion)");
+    const a = c.achievements, w = c.week, k = c.campaigns;
+    if (!a || !w || !k) throw new Error("blocos achievements, week ou campaigns ausentes");
+    const fase = lista(c.phases, "phases").findIndex((p) => p.current === true);
+    return {
+      updatedAt: "Referência: " + dataBR(c.referenceDate),
+      summary: texto(c.summary, "summary"),
+      contact: texto(c.contact, "contact"),
+      closes: texto(c.closes, "closes"),
+      week: [texto(w.done, "week.done"), texto(w.blocked, "week.blocked"), texto(w.next, "week.next")],
+      intro: texto(a.intro, "achievements.intro"),
+      achievements: lista(a.items, "achievements.items").map((i) => el("li", { class: "achievement-card" },
+        chip(tom(i.tone, "achievements.items[].tone"), texto(i.status, "achievements.items[].status")),
+        el("h3", null, texto(i.title, "achievements.items[].title")),
+        el("p", null, texto(i.detail, "achievements.items[].detail")))),
+      note: [el("strong", null, texto(a.note.lead, "achievements.note.lead")), " " + texto(a.note.text, "achievements.note.text")],
+      phases: c.phases.map((p, i) => el("li", { class: i < fase ? "done" : i === fase ? "current" : null, "aria-current": i === fase ? "step" : null },
+        el("div", { class: "phase-marker" }, el("span", null, String(i + 1))),
+        el("div", { class: "phase-copy" }, i === fase ? el("em", null, "Fase atual") : null,
+          el("strong", null, texto(p.title, "phases[].title")), el("p", null, texto(p.detail, "phases[].detail"))))),
+      campaigns: [
+        el("div", { class: "campaigns-meta" }, chip(tom(k.tone, "campaigns.tone"), texto(k.status, "campaigns.status"))),
+        el("p", null, texto(k.intro, "campaigns.intro")),
+        el("ol", { class: "campaigns-steps" }, lista(k.steps, "campaigns.steps").map((s) => el("li", null, el("strong", null, texto(s.title, "campaigns.steps[].title")), el("p", null, texto(s.detail, "campaigns.steps[].detail"))))),
+        el("p", { class: "campaigns-condition" }, texto(k.condition, "campaigns.condition")),
+      ],
+      dependencies: lista(c.dependencies, "dependencies").map((d) => el("li", null,
+        el("div", { class: "task-main" }, el("strong", null, texto(d.title, "dependencies[].title")),
+          el("div", { class: "task-meta" }, el("span", { class: "owner" }, "Responsável: " + texto(d.owner, "dependencies[].owner")), el("span", { class: "asked" }, texto(d.asked, "dependencies[].asked")))),
+        el("p", null, texto(d.purpose, "dependencies[].purpose")), chip(classeStatus(d.status), texto(d.status, "dependencies[].status")))),
+      deliveries: lista(c.deliveries, "deliveries").map((d) => {
+        const link = texto(d.link, "deliveries[].link");
+        if (link && !/^https:\/\//.test(link)) throw new Error("deliveries[].link precisa começar com https://");
+        return el("li", null,
+          el("div", { class: "task-main" }, el("strong", null, texto(d.title, "deliveries[].title")), el("span", { class: "owner" }, texto(d.date, "deliveries[].date"))),
+          el("p", null, link ? el("a", { href: link, target: "_blank", rel: "noopener" }, "Abrir entrega") : el("span", { class: "nolink" }, "As definições serão disponibilizadas após sua consolidação.")),
+          chip(classeStatus(d.status), texto(d.status, "deliveries[].status")));
+      }),
+    };
+  }
 
-  $("updatedAt").textContent = content.updatedAt;
-  $("closes").textContent = content.closes;
-  $("weekDone").textContent = content.week.done;
-  $("weekBlocked").textContent = content.week.blocked;
-  $("weekNext").textContent = content.week.next;
-  $("contact").textContent = content.contact;
+  function aplicar(c) {
+    let v;
+    try { v = montar(c); } catch (e) { return falhar("conteúdo fora do formato: " + e.message); }
+    $("updatedAt").textContent = v.updatedAt;
+    $("summary").textContent = v.summary;
+    $("contact").textContent = v.contact;
+    $("closes").textContent = v.closes;
+    $("weekDone").textContent = v.week[0]; $("weekBlocked").textContent = v.week[1]; $("weekNext").textContent = v.week[2];
+    $("achievementsIntro").textContent = v.intro;
+    $("achievements").replaceChildren(...v.achievements);
+    $("achievementsNote").replaceChildren(...v.note);
+    $("phases").replaceChildren(...v.phases);
+    $("campaigns").replaceChildren(...v.campaigns);
+    $("dependencies").replaceChildren(...v.dependencies);
+    $("deliveries").replaceChildren(...v.deliveries);
+    $("carregando").hidden = true; $("erro").hidden = true; $("conteudo").hidden = false;
+  }
 
-  const cur = content.phases.findIndex(p => p.current);
-  $("phases").innerHTML = content.phases.map((p, i) => {
-    const cls = i < cur ? "done" : (i === cur ? "current" : "");
-    return `<li class="${cls}"${i === cur ? ' aria-current="step"' : ""}>
-      <div class="phase-marker"><span>${i + 1}</span></div>
-      <div class="phase-copy">${i === cur ? "<em>Fase atual</em>" : ""}<strong>${esc(p.title)}</strong><p>${esc(p.detail)}</p></div>
-    </li>`;
-  }).join("");
+  function falhar(detalhe) {
+    $("conteudo").hidden = true; $("carregando").hidden = true;
+    $("updatedAt").textContent = ""; $("summary").textContent = "";
+    $("erroDetalhe").textContent = detalhe; $("erro").hidden = false;
+  }
 
-  $("dependencies").innerHTML = content.dependencies.map(d => `<li>
-    <div class="task-main">
-      <strong>${esc(d.title)}</strong>
-      <div class="task-meta"><span class="owner">Responsável: ${esc(d.owner)}</span><span class="asked">${esc(d.asked)}</span></div>
-    </div>
-    <p>${esc(d.purpose)}</p>
-    <span class="status ${statusClass(d.status)}">${esc(d.status)}</span>
-  </li>`).join("");
-
-  $("deliveries").innerHTML = content.deliveries.map(d => `<li>
-    <div class="task-main"><strong>${esc(d.title)}</strong><span class="owner">${esc(d.date)}</span></div>
-    <p>${d.link ? `<a href="${esc(d.link)}" target="_blank" rel="noopener">Abrir entrega</a>` : `<span class="nolink">As definições serão disponibilizadas após sua consolidação.</span>`}</p>
-    <span class="status ${statusClass(d.status)}">${esc(d.status)}</span>
-  </li>`).join("");
-}
-render(content);
-fetch("content.json", {cache: "no-store"})
-  .then(r => r.ok ? r.json() : Promise.reject(r.status))
-  .then(data => { if (data && data.updatedAt && data.week && data.phases) render(data); })
-  .catch(() => {});
+  const previa = window.__CONTEUDO_PREVIA__;
+  if (previa) {
+    document.title = "[Prévia] " + document.title;
+    document.body.prepend(el("div", { class: "faixa-previa", role: "note" }, "PRÉVIA — este conteúdo ainda NÃO foi publicado. Para publicar: faça o merge e use Run workflow."));
+    aplicar(previa);
+  } else {
+    const ctl = new AbortController(); const t = setTimeout(() => ctl.abort(), 15000);
+    fetch("content.json", { cache: "no-store", signal: ctl.signal })
+      .then((r) => { if (!r.ok) throw new Error("content.json respondeu HTTP " + r.status); return r.json(); })
+      .then(aplicar)
+      .catch((e) => falhar(e.name === "AbortError" ? "tempo esgotado ao ler content.json" : e instanceof SyntaxError ? "content.json não é um JSON válido" : e.message))
+      .finally(() => clearTimeout(t));
+  }
+})();
 </script>
 </body>
 </html>

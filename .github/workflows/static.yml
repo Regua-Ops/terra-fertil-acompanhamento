@@ -1,39 +1,59 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+# Publica a Status Page no GitHub Pages. SÓ por acionamento manual (Actions > Publicar Status Page > Run workflow),
+# sempre a partir da main, e só depois de validar o content.json. Publica apenas index.html, content.json e CNAME.
+name: Publicar Status Page
 
 on:
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+# Uma publicação por vez; não cancela uma em andamento.
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
+  validar:
+    name: Validar conteúdo
+    runs-on: ubuntu-latest
+    steps:
+      - name: Só publica a partir da main
+        run: |
+          if [ "$GITHUB_REF" != "refs/heads/main" ]; then
+            echo "::error title=Branch errada::Publique a partir da main (em Run workflow, escolha Branch: main). Branch atual: $GITHUB_REF_NAME"
+            exit 1
+          fi
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Testes do validador
+        run: node --test "tests/*.test.mjs"
+      - name: Conteúdo hoje no ar (para comparar)
+        run: curl -fsSL --max-time 20 https://tf-statuspage.reguaops.lat/content.json -o /tmp/publicado.json || rm -f /tmp/publicado.json
+      - name: Validar content.json (erro bloqueia a publicação)
+        run: node scripts/validar-conteudo.mjs content.json --base /tmp/publicado.json
+
   deploy:
+    name: Publicar
+    needs: validar
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - uses: actions/checkout@v4
+      - name: Montar o site (somente o que é público)
+        run: mkdir _site && cp index.html content.json CNAME _site/
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: '.'
+          path: _site
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
