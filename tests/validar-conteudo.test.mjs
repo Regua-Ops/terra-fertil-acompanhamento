@@ -4,16 +4,24 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { validar } from "../scripts/lib/conteudo.mjs";
 
-const politica = JSON.parse(readFileSync(new URL("../politica-publica.json", import.meta.url), "utf8"));
-const original = JSON.parse(readFileSync(new URL("../content.json", import.meta.url), "utf8"));
+// Fixtures próprias: editar o content.json ou a política de verdade não pode quebrar estes testes.
+const lerJson = (rel) => JSON.parse(readFileSync(new URL(rel, import.meta.url), "utf8"));
+const politica = lerJson("./fixtures/politica-teste.json");
+const original = lerJson("./fixtures/content-valido.json");
 const HOJE = "2026-11-14";
 const clone = () => structuredClone(original);
 const rodar = (c, extra = {}, pol = politica) =>
   validar(typeof c === "string" ? c : JSON.stringify(c, null, 2), { politica: pol, hoje: HOJE, ...extra });
 const regras = (r, nivel = "erros") => r[nivel].map((x) => `${x.campo}:${x.regra}`);
 
-test("o content.json do repositório é válido", () => {
+test("a fixture válida é válida (e a política de verdade compila: regex e formato)", () => {
   assert.deepEqual(rodar(original).erros, []);
+  const real = lerJson("../politica-publica.json");
+  for (const r of [...(real.bloqueios ?? []), ...(real.avisos ?? [])]) {
+    assert.ok(r.id && r.padrao && r.mensagem, `regra incompleta: ${JSON.stringify(r)}`);
+    assert.doesNotThrow(() => new RegExp(r.padrao, "iu"), `regex inválida em ${r.id}`);
+  }
+  assert.ok(Array.isArray(real.linksPermitidos) && real.linksPermitidos.every((l) => l.startsWith("https://")));
 });
 
 test("JSON quebrado: erro com linha", () => {

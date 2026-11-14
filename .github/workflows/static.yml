@@ -28,12 +28,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Testes do validador
-        run: node --test "tests/*.test.mjs"
       - name: Conteúdo hoje no ar (para comparar)
         run: curl -fsSL --max-time 20 https://tf-statuspage.reguaops.lat/content.json -o /tmp/publicado.json || rm -f /tmp/publicado.json
       - name: Validar content.json (erro bloqueia a publicação)
         run: node scripts/validar-conteudo.mjs content.json --base /tmp/publicado.json
+      - name: Testes do validador
+        run: node --test "tests/*.test.mjs"
 
   deploy:
     name: Publicar

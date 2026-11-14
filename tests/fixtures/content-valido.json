@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 2,
+  "referenceDate": "2026-10-31",
+  "summary": "As verificações iniciais de Meta Ads e WATI já foram concluídas, assim como a análise de mídia, com limitações documentadas. Veja os avanços acumulados e o que falta esclarecer para seguir.",
+  "achievements": {
+    "intro": "Trabalho acumulado até 31/10/2026. Cada frente apresenta o avanço alcançado e seus limites.",
+    "items": [
+      {
+        "status": "Verificação concluída",
+        "tone": "concluido",
+        "title": "Ativos Meta Ads verificados",
+        "detail": "Concluímos as verificações iniciais dos ativos de anúncios que integram o diagnóstico de mídia e rastreamento."
+      },
+      {
+        "status": "Verificação concluída",
+        "tone": "concluido",
+        "title": "Recursos nativos do WATI analisados",
+        "detail": "Concluímos as verificações iniciais dos recursos nativos do WATI, como parte da análise do rastreamento das conversas no WhatsApp."
+      },
+      {
+        "status": "Concluída com limitações",
+        "tone": "concluido",
+        "title": "Estrutura e investimentos de mídia analisados",
+        "detail": "Concluímos a análise da estrutura de mídia e dos investimentos, registrando as limitações que precisam acompanhar a leitura dos resultados."
+      },
+      {
+        "status": "Possibilidades identificadas",
+        "tone": "concluido",
+        "title": "Caminhos técnicos de rastreamento identificados",
+        "detail": "O diagnóstico identificou possibilidades técnicas para o rastreamento. Esse levantamento foi realizado sem alterar campanhas ou processos de atendimento."
+      },
+      {
+        "status": "Planejamento concluído",
+        "tone": "concluido",
+        "title": "Planejamento de migração elaborado",
+        "detail": "A etapa de planejamento da migração foi concluída. Este avanço corresponde ao planejamento; a execução da migração é uma etapa distinta."
+      },
+      {
+        "status": "Preparação iniciada",
+        "tone": "andamento",
+        "title": "Preparação documental da qualidade comercial",
+        "detail": "Iniciamos a preparação documental dessa frente. O próximo passo é consolidar as definições de qualificação, passagem SDR → closer e status comerciais para validação da Terra Fértil."
+      }
+    ],
+    "note": {
+      "lead": "O que essas análises já esclareceram:",
+      "text": "há possibilidades técnicas de rastreamento, mas a associação retrospectiva entre cada anúncio e sua conversa no WhatsApp ainda depende de evidências adicionais. O diagnóstico permanece em andamento."
+    }
+  },
+  "phases": [
+    {
+      "title": "Diagnóstico",
+      "detail": "Em andamento, com limitações documentadas.",
+      "current": true
+    },
+    {
+      "title": "Qualidade comercial",
+      "detail": "Preparação documental iniciada, sem conclusão formal da fase."
+    },
+    {
+      "title": "Solução",
+      "detail": "Não iniciada."
+    },
+    {
+      "title": "Piloto",
+      "detail": "Não iniciado."
+    }
+  ],
+  "closes": "Termina quando soubermos, com evidência, quanto do que chega no WhatsApp vem de anúncio e quanto não vem.",
+  "week": {
+    "done": "As verificações iniciais dos ativos Meta Ads e dos recursos nativos do WATI foram concluídas. A análise da estrutura e dos investimentos de mídia também foi concluída, com as limitações documentadas. O diagnóstico identificou possibilidades técnicas de rastreamento, sem alterar campanhas ou processos de atendimento.",
+    "blocked": "Ainda não foi possível comprovar retrospectivamente a associação entre cada anúncio e sua conversa correspondente no WhatsApp. A reconciliação Meta Ads × WATI permanece dependente de evidências adicionais. Também faltam definições comerciais validadas para qualificação, orçamento e venda.",
+    "next": "Consolidar as definições comerciais para validação da Terra Fértil e organizar as fontes e definições dos indicadores disponíveis. Na frente de mídia, aprofundar a análise das campanhas da V4. Novas campanhas serão propostas após a análise da V4 e dependerão de aprovação específica."
+  },
+  "campaigns": {
+    "status": "Planejado",
+    "tone": "andamento",
+    "intro": "Novas campanhas serão propostas após a análise da V4 e dependerão de aprovação específica.",
+    "steps": [
+      {
+        "title": "Analisar a fundo as campanhas da V4",
+        "detail": "Entender os padrões das campanhas atuais e definir quais devem ser replicados e quais devem ser descartados na preparação das novas campanhas."
+      },
+      {
+        "title": "Propor novas campanhas para aprovação",
+        "detail": "Usar as conclusões dessa análise para preparar propostas de campanhas, sem ativação antes de aprovação específica."
+      }
+    ],
+    "condition": "A ativação de campanhas depende de autorização operacional específica."
+  },
+  "dependencies": [
+    {
+      "title": "Confirmar critérios de qualificação de leads",
+      "owner": "Terra Fértil",
+      "asked": "Validação pendente",
+      "purpose": "Definir os critérios comerciais de qualificação.",
+      "status": "Pendente"
+    },
+    {
+      "title": "Confirmar passagem SDR → closer e status comerciais",
+      "owner": "Terra Fértil",
+      "asked": "Validação pendente",
+      "purpose": "Validar a passagem entre as etapas e seus status.",
+      "status": "Pendente"
+    },
+    {
+      "title": "Validar o dicionário de status do ERP",
+      "owner": "Terra Fértil",
+      "asked": "Validação pendente",
+      "purpose": "Incluir a definição de venda confirmada.",
+      "status": "Pendente"
+    }
+  ],
+  "deliveries": [
+    {
+      "title": "Definições comerciais para validação",
+      "date": "Envio ainda não confirmado",
+      "status": "Em preparação",
+      "link": ""
+    }
+  ],
+  "contact": "Contato institucional: a definir"
+}

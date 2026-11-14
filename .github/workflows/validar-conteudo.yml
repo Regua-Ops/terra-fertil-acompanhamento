@@ -23,14 +23,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Testes do validador
-        run: node --test "tests/*.test.mjs"
       - name: Versão de comparação
         run: |
           if [ "$GITHUB_REF" = "refs/heads/main" ]; then REF="HEAD^"; else REF="origin/main"; fi
           git show "$REF:content.json" > /tmp/base.json 2>/dev/null || rm -f /tmp/base.json
       - name: Validar content.json
         run: node scripts/validar-conteudo.mjs content.json --base /tmp/base.json
+      - name: Testes do validador
+        if: always()
+        run: node --test "tests/*.test.mjs"
       - name: Gerar prévia da página
         if: always()
         continue-on-error: true
