@@ -1,0 +1,21 @@
+{
+  "_leia-me": "Regras da exposição pública da Status Page, aplicadas por scripts/validar-conteudo.mjs. 'erro' bloqueia a publicação; 'aviso' só avisa. ESTE ARQUIVO É PÚBLICO: não escreva aqui dados pessoais nem nomes de pessoas.",
+  "contatosPermitidos": {
+    "_leia-me": "Único lugar onde e-mail, telefone ou URL de contato podem aparecer: o campo \"contact\" do content.json. Liste aqui só contatos institucionais, por decisão do owner.",
+    "emails": [],
+    "telefones": [],
+    "urls": []
+  },
+  "linksPermitidos": [
+    "https://tf-statuspage.reguaops.lat/",
+    "https://portal-terrafertil.reguaops.lat/entrada"
+  ],
+  "bloqueios": [],
+  "avisos": [
+    { "id": "terceiro-nomeado", "padrao": "\\bV4\\b", "mensagem": "cita a V4 (fornecedor atual) pelo nome em texto público. Confirme que é intencional." },
+    { "id": "ferramenta-ia", "padrao": "\\b(Claude|Codex|ChatGPT|Gemini|Copilot|GPT)\\b", "mensagem": "cita ferramenta de IA pelo nome; o texto ao cliente não detalha a maquinaria interna." },
+    { "id": "id-interno", "padrao": "\\b(?:P-)?TER-\\d+\\b", "mensagem": "identificador interno do Linear em texto público." },
+    { "id": "valor-monetario", "padrao": "R\\$\\s?\\d", "mensagem": "valor em reais em texto público (investimento, custo ou resultado). Confirme que pode ser público." },
+    { "id": "hash-de-commit", "padrao": "\\b[0-9a-f]{40}\\b|@[0-9a-f]{7,40}\\b", "mensagem": "parece referência de commit/evidência interna." }
+  ]
+}
