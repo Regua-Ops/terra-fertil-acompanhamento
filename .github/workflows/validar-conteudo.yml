@@ -7,7 +7,7 @@ on:
     branches: ["**"]
 
 concurrency:
-  group: validar-${{ github.head_ref || github.ref_name }}
+  group: validar-${{ github.event_name }}-${{ github.head_ref || github.ref_name }}
   cancel-in-progress: true
 
 permissions:
