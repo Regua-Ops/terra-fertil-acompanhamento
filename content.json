@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "referenceDate": "2026-11-25",
-  "summary": "A proposta do teste de Tucson está em alinhamento final para envio em 25/11. As datas propostas de início são 7/12, com aprovações até 1/12, ou 5/01, com aprovações até 18/12. O diagnóstico da origem das conversas no WhatsApp segue em paralelo.",
+  "summary": "A proposta do teste de Tucson, versão 2.0.1, foi publicada no portal em 25/11 e aguarda as aprovações da Terra Fértil. As datas propostas de início são 7/12, com aprovações até 1/12, ou 5/01, com aprovações até 18/12. O diagnóstico da origem das conversas no WhatsApp segue em paralelo.",
   "achievements": {
     "intro": "Trabalho acumulado e informações conferidas até 25/11/2026.",
     "items": [
@@ -18,16 +18,16 @@
         "detail": "A análise histórica da estrutura e do investimento foi concluída no escopo delimitado, com as limitações registradas. Ela não comprova vendas atribuídas aos anúncios."
       },
       {
-        "status": "Preparado",
+        "status": "Publicado para validação",
         "tone": "andamento",
         "title": "Planejamento do teste de Tucson",
-        "detail": "Foi preparada uma proposta de teste de 30 dias em duas regiões, com as condições que precisam ser validadas antes da montagem da campanha."
+        "detail": "A proposta de teste de 30 dias em duas regiões está no portal, com as condições que precisam ser validadas antes da montagem da campanha."
       },
       {
-        "status": "Em preparação",
+        "status": "Disponível no portal",
         "tone": "andamento",
         "title": "Materiais e aprovações da proposta",
-        "detail": "Texto, PDF e itens de aprovação estão em alinhamento final para apresentar uma única versão à Terra Fértil."
+        "detail": "Texto e PDF da proposta, PDF dos textos e duas imagens estão disponíveis no portal. Três itens de aprovação aguardam decisão da Terra Fértil."
       },
       {
         "status": "Em aberto",
@@ -49,7 +49,7 @@
     },
     {
       "title": "Qualidade comercial",
-      "detail": "Preparação documental em andamento. Definições de atendimento, qualificação e venda aguardam validação."
+      "detail": "Proposta e materiais disponíveis no portal. Definições de atendimento, qualificação e venda aguardam validação."
     },
     {
       "title": "Solução",
@@ -62,14 +62,14 @@
   ],
   "closes": "Esta etapa termina com o diagnóstico do que pode ser atribuído aos anúncios, do que permanece sem origem comprovada e dos limites da medição.",
   "week": {
-    "done": "Foram integrados os recursos para disponibilizar PDFs e imagens junto aos documentos e registrar as aprovações do cliente por item.",
-    "blocked": "A proposta aguarda a publicação da versão alinhada e o envio à Terra Fértil. O teste depende das aprovações comerciais e técnicas e das definições de atendimento. A ligação entre cada anúncio e sua conversa no WhatsApp continua sem comprovação.",
-    "next": "Enviar a proposta em 25/11 e colher as confirmações necessárias. Preparar a campanha conforme as condições aprovadas para início em 7/12 ou 5/01. Dar continuidade à análise da conta e ao levantamento das evidências de origem."
+    "done": "A proposta de Tucson v2.0.1 foi publicada no portal em 25/11, com dois PDFs, duas imagens e três itens de aprovação. Os quatro arquivos foram conferidos por download autenticado.",
+    "blocked": "O teste depende das aprovações comerciais e técnicas da Terra Fértil e das definições de atendimento. A ligação entre cada anúncio e sua conversa no WhatsApp continua sem comprovação.",
+    "next": "Apresentar à Terra Fértil a proposta publicada e colher as confirmações necessárias. Preparar a campanha conforme as condições aprovadas para início em 7/12 ou 5/01. Dar continuidade à análise da conta e ao levantamento das evidências de origem."
   },
   "campaigns": {
-    "status": "Proposta em preparação",
+    "status": "Proposta publicada; teste não iniciado",
     "tone": "andamento",
-    "intro": "Teste proposto de 30 dias para Tucson, em duas regiões, com destino à conversa no WhatsApp. As datas propostas de início são 7/12 ou 5/01, condicionadas às aprovações e à preparação da campanha.",
+    "intro": "A proposta do teste de 30 dias para Tucson, em duas regiões e com destino à conversa no WhatsApp, está disponível no portal. As datas propostas de início são 7/12 ou 5/01, condicionadas às aprovações e à preparação da campanha.",
     "steps": [
       {
         "title": "Apresentação e validação",
@@ -132,7 +132,7 @@
   ],
   "deliveries": [
     {
-      "title": "Proposta e materiais do teste de Tucson",
+      "title": "Apresentação da proposta e materiais do teste de Tucson",
       "date": "25/11/2026",
       "status": "Em preparação",
       "link": "https://portal-terrafertil.reguaops.lat/entrada"
