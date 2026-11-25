@@ -1,61 +1,55 @@
 {
   "schemaVersion": 2,
-  "referenceDate": "2026-10-31",
-  "summary": "As verificações iniciais de Meta Ads e WATI já foram concluídas, assim como a análise de mídia, com limitações documentadas. Veja os avanços acumulados e o que falta esclarecer para seguir.",
+  "referenceDate": "2026-11-25",
+  "summary": "A proposta do teste de Tucson está em alinhamento final para envio em 25/11. As datas propostas de início são 7/12, com aprovações até 1/12, ou 5/01, com aprovações até 18/12. O diagnóstico da origem das conversas no WhatsApp segue em paralelo.",
   "achievements": {
-    "intro": "Trabalho acumulado até 31/10/2026. Cada frente apresenta o avanço alcançado e seus limites.",
+    "intro": "Trabalho acumulado e informações conferidas até 25/11/2026.",
     "items": [
       {
-        "status": "Verificação concluída",
+        "status": "Concluído com limites",
         "tone": "concluido",
-        "title": "Ativos Meta Ads verificados",
-        "detail": "Concluímos as verificações iniciais dos ativos de anúncios que integram o diagnóstico de mídia e rastreamento."
+        "title": "Verificações iniciais de anúncios e atendimento",
+        "detail": "Foram conferidos ativos de anúncios e recursos disponíveis no WATI. Essa etapa não comprova a origem de cada conversa no WhatsApp."
       },
       {
-        "status": "Verificação concluída",
+        "status": "Concluído com limites",
         "tone": "concluido",
-        "title": "Recursos nativos do WATI analisados",
-        "detail": "Concluímos as verificações iniciais dos recursos nativos do WATI, como parte da análise do rastreamento das conversas no WhatsApp."
+        "title": "Estrutura e investimento de mídia analisados",
+        "detail": "A análise histórica da estrutura e do investimento foi concluída no escopo delimitado, com as limitações registradas. Ela não comprova vendas atribuídas aos anúncios."
       },
       {
-        "status": "Concluída com limitações",
-        "tone": "concluido",
-        "title": "Estrutura e investimentos de mídia analisados",
-        "detail": "Concluímos a análise da estrutura de mídia e dos investimentos, registrando as limitações que precisam acompanhar a leitura dos resultados."
-      },
-      {
-        "status": "Possibilidades identificadas",
-        "tone": "concluido",
-        "title": "Caminhos técnicos de rastreamento identificados",
-        "detail": "O diagnóstico identificou possibilidades técnicas para o rastreamento. Esse levantamento foi realizado sem alterar campanhas ou processos de atendimento."
-      },
-      {
-        "status": "Planejamento concluído",
-        "tone": "concluido",
-        "title": "Planejamento de migração elaborado",
-        "detail": "A etapa de planejamento da migração foi concluída. Este avanço corresponde ao planejamento; a execução da migração é uma etapa distinta."
-      },
-      {
-        "status": "Preparação iniciada",
+        "status": "Preparado",
         "tone": "andamento",
-        "title": "Preparação documental da qualidade comercial",
-        "detail": "Iniciamos a preparação documental dessa frente. O próximo passo é consolidar as definições de qualificação, passagem SDR → closer e status comerciais para validação da Terra Fértil."
+        "title": "Planejamento do teste de Tucson",
+        "detail": "Foi preparada uma proposta de teste de 30 dias em duas regiões, com as condições que precisam ser validadas antes da montagem da campanha."
+      },
+      {
+        "status": "Em preparação",
+        "tone": "andamento",
+        "title": "Materiais e aprovações da proposta",
+        "detail": "Texto, PDF e itens de aprovação estão em alinhamento final para apresentar uma única versão à Terra Fértil."
+      },
+      {
+        "status": "Em aberto",
+        "tone": "pendente",
+        "title": "Origem das conversas no WhatsApp",
+        "detail": "Ainda falta demonstrar a ligação entre os anúncios e as conversas recebidas. Essa verificação permanece separada da avaliação do teste de mídia."
       }
     ],
     "note": {
-      "lead": "O que essas análises já esclareceram:",
-      "text": "há possibilidades técnicas de rastreamento, mas a associação retrospectiva entre cada anúncio e sua conversa no WhatsApp ainda depende de evidências adicionais. O diagnóstico permanece em andamento."
+      "lead": "O que já sabemos:",
+      "text": "a análise de mídia e as informações de vendas fornecidas pela Terra Fértil ajudam a preparar a proposta. Ainda não foi comprovado quantas vendas podem ser atribuídas aos anúncios."
     }
   },
   "phases": [
     {
       "title": "Diagnóstico",
-      "detail": "Em andamento, com limitações documentadas.",
+      "detail": "Conferências iniciais concluídas; falta comprovar a associação entre anúncio e conversa e reconciliar os indicadores.",
       "current": true
     },
     {
       "title": "Qualidade comercial",
-      "detail": "Preparação documental iniciada, sem conclusão formal da fase."
+      "detail": "Preparação documental em andamento. Definições de atendimento, qualificação e venda aguardam validação."
     },
     {
       "title": "Solução",
@@ -63,61 +57,93 @@
     },
     {
       "title": "Piloto",
-      "detail": "Não iniciado."
+      "detail": "Não iniciado. O teste de Tucson permanece em preparação."
     }
   ],
-  "closes": "Termina quando soubermos, com evidência, quanto do que chega no WhatsApp vem de anúncio e quanto não vem.",
+  "closes": "Esta etapa termina com o diagnóstico do que pode ser atribuído aos anúncios, do que permanece sem origem comprovada e dos limites da medição.",
   "week": {
-    "done": "As verificações iniciais dos ativos Meta Ads e dos recursos nativos do WATI foram concluídas. A análise da estrutura e dos investimentos de mídia também foi concluída, com as limitações documentadas. O diagnóstico identificou possibilidades técnicas de rastreamento, sem alterar campanhas ou processos de atendimento.",
-    "blocked": "Ainda não foi possível comprovar retrospectivamente a associação entre cada anúncio e sua conversa correspondente no WhatsApp. A reconciliação Meta Ads × WATI permanece dependente de evidências adicionais. Também faltam definições comerciais validadas para qualificação, orçamento e venda.",
-    "next": "Consolidar as definições comerciais para validação da Terra Fértil e organizar as fontes e definições dos indicadores disponíveis. Na frente de mídia, aprofundar a análise das campanhas da V4. Novas campanhas serão propostas após a análise da V4 e dependerão de aprovação específica."
+    "done": "Foram integrados os recursos para disponibilizar PDFs e imagens junto aos documentos e registrar as aprovações do cliente por item.",
+    "blocked": "A proposta aguarda a publicação da versão alinhada e o envio à Terra Fértil. O teste depende das aprovações comerciais e técnicas e das definições de atendimento. A ligação entre cada anúncio e sua conversa no WhatsApp continua sem comprovação.",
+    "next": "Enviar a proposta em 25/11 e colher as confirmações necessárias. Preparar a campanha conforme as condições aprovadas para início em 7/12 ou 5/01. Dar continuidade à análise da conta e ao levantamento das evidências de origem."
   },
   "campaigns": {
-    "status": "Planejado",
+    "status": "Proposta em preparação",
     "tone": "andamento",
-    "intro": "Novas campanhas serão propostas após a análise da V4 e dependerão de aprovação específica.",
+    "intro": "Teste proposto de 30 dias para Tucson, em duas regiões, com destino à conversa no WhatsApp. As datas propostas de início são 7/12 ou 5/01, condicionadas às aprovações e à preparação da campanha.",
     "steps": [
       {
-        "title": "Analisar a fundo as campanhas da V4",
-        "detail": "Entender os padrões das campanhas atuais e definir quais devem ser replicados e quais devem ser descartados na preparação das novas campanhas."
+        "title": "Apresentação e validação",
+        "detail": "Conferir proposta, regiões, orçamento, início, textos e artes. Para início em 7/12, as aprovações estão previstas até 1/12; para 5/01, até 18/12. Os textos precisam da validação do responsável técnico."
       },
       {
-        "title": "Propor novas campanhas para aprovação",
-        "detail": "Usar as conclusões dessa análise para preparar propostas de campanhas, sem ativação antes de aprovação específica."
+        "title": "Preparação do teste",
+        "detail": "Após as aprovações, confirmar o atendimento e as condições de medição, montar a campanha e conferir a configuração antes da ativação."
+      },
+      {
+        "title": "Teste e acompanhamento",
+        "detail": "O planejamento prevê primeiro boletim no dia 14 e decisão no dia 30, contados a partir do início efetivo do teste."
       }
     ],
-    "condition": "A ativação de campanhas depende de autorização operacional específica."
+    "condition": "Início proposto em 7/12 com aprovações até 1/12, ou em 5/01 com aprovações até 18/12. A Régua confirma o lançamento após as aprovações e a conferência da campanha."
   },
   "dependencies": [
     {
-      "title": "Confirmar critérios de qualificação de leads",
-      "owner": "Terra Fértil",
-      "asked": "Validação pendente",
-      "purpose": "Definir os critérios comerciais de qualificação.",
-      "status": "Pendente"
+      "title": "Validar regiões, orçamento, distribuição da verba e data de início",
+      "owner": "Terra Fértil · Comercial",
+      "asked": "A confirmar na apresentação da proposta",
+      "purpose": "Definir as condições para a montagem do teste.",
+      "status": "A validar"
     },
     {
-      "title": "Confirmar passagem SDR → closer e status comerciais",
-      "owner": "Terra Fértil",
-      "asked": "Validação pendente",
-      "purpose": "Validar a passagem entre as etapas e seus status.",
-      "status": "Pendente"
+      "title": "Definir o atendimento das conversas de cada região",
+      "owner": "Terra Fértil · Comercial",
+      "asked": "A confirmar na apresentação da proposta",
+      "purpose": "Combinar responsáveis, tempo de resposta e atendimento fora do horário.",
+      "status": "A validar"
     },
     {
-      "title": "Validar o dicionário de status do ERP",
-      "owner": "Terra Fértil",
-      "asked": "Validação pendente",
-      "purpose": "Incluir a definição de venda confirmada.",
-      "status": "Pendente"
+      "title": "Validar os textos e confirmar o uso das artes",
+      "owner": "Terra Fértil · Comercial e responsável técnico",
+      "asked": "A confirmar na apresentação da proposta",
+      "purpose": "Revisar os textos com o responsável técnico e confirmar os materiais que poderão ser usados.",
+      "status": "A validar"
+    },
+    {
+      "title": "Confirmar os recortes da planilha usados na proposta de regiões",
+      "owner": "Terra Fértil · Comercial",
+      "asked": "A confirmar na apresentação da proposta",
+      "purpose": "Conferir a identificação de um município e os períodos da planilha antes do fechamento da montagem.",
+      "status": "A validar"
+    },
+    {
+      "title": "Combinar o registro de conversas e vendas durante o teste",
+      "owner": "Terra Fértil · Comercial",
+      "asked": "A confirmar na apresentação da proposta",
+      "purpose": "Definir quem registra e envia as informações necessárias à avaliação, sem dados pessoais de compradores.",
+      "status": "A validar"
+    },
+    {
+      "title": "Validar qualificação, etapas do atendimento e venda confirmada",
+      "owner": "Terra Fértil · Comercial",
+      "asked": "Validação a combinar",
+      "purpose": "Consolidar as definições comerciais necessárias ao diagnóstico de origem e de resultados.",
+      "status": "A validar"
     }
   ],
   "deliveries": [
     {
-      "title": "Definições comerciais para validação",
-      "date": "Envio ainda não confirmado",
+      "title": "Proposta e materiais do teste de Tucson",
+      "date": "25/11/2026",
       "status": "Em preparação",
-      "link": ""
+      "link": "https://portal-terrafertil.reguaops.lat/entrada"
+    },
+    {
+      "title": "Análise complementar das campanhas",
+      "date": "Data a combinar",
+      "status": "Em preparação",
+      "link": "https://portal-terrafertil.reguaops.lat/entrada"
     }
   ],
-  "contact": "Contato institucional: a definir"
+  "contact": "Régua · documentos e acompanhamento no portal do projeto."
 }
+
