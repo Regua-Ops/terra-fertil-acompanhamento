@@ -1,9 +1,9 @@
 {
   "schemaVersion": 2,
-  "referenceDate": "2026-11-25",
-  "summary": "A proposta do teste de Tucson, versão 2.0.1, foi publicada no portal em 25/11 e aguarda as aprovações da Terra Fértil. As datas propostas de início são 7/12, com aprovações até 1/12, ou 5/01, com aprovações até 18/12. O diagnóstico da origem das conversas no WhatsApp segue em paralelo.",
+  "referenceDate": "2026-11-26",
+  "summary": "A proposta do teste de Tucson, versão 2.0.1, está no portal e a Terra Fértil já foi avisada. Aguardamos a validação de regiões, orçamento e distribuição da verba, início, textos e artes. Datas propostas: 7/12 (aprovações até 1/12) ou 5/01 (aprovações até 18/12). A verificação da origem das conversas no WhatsApp segue em paralelo.",
   "achievements": {
-    "intro": "Trabalho acumulado e informações conferidas até 25/11/2026.",
+    "intro": "Trabalho acumulado e informações conferidas até 26/11/2026.",
     "items": [
       {
         "status": "Concluído com limites",
@@ -43,37 +43,37 @@
   },
   "phases": [
     {
-      "title": "Diagnóstico",
-      "detail": "Conferências iniciais concluídas; falta comprovar a associação entre anúncio e conversa e reconciliar os indicadores.",
+      "title": "Diagnóstico inicial",
+      "detail": "Mapeamento e análises aplicados à proposta de Tucson. A verificação da origem das conversas no WhatsApp segue em paralelo."
+    },
+    {
+      "title": "Proposta aguardando validação da Terra Fértil",
+      "detail": "A proposta do teste de Tucson está disponível no portal. Aguardamos a validação das regiões, orçamento e distribuição da verba, data de início, textos e artes.",
       "current": true
     },
     {
-      "title": "Qualidade comercial",
-      "detail": "Proposta e materiais disponíveis no portal. Definições de atendimento, qualificação e venda aguardam validação."
-    },
-    {
-      "title": "Solução",
-      "detail": "Não iniciada."
+      "title": "Preparação da campanha",
+      "detail": "Após as aprovações, confirmar atendimento e medição, montar a campanha e conferir a configuração."
     },
     {
       "title": "Piloto",
-      "detail": "Não iniciado. O teste de Tucson permanece em preparação."
+      "detail": "Não iniciado. O teste de Tucson depende da validação da proposta e da preparação da campanha."
     }
   ],
-  "closes": "Esta etapa termina com o diagnóstico do que pode ser atribuído aos anúncios, do que permanece sem origem comprovada e dos limites da medição.",
+  "closes": "Próximo passo: receber a validação da Terra Fértil para preparar e conferir a campanha.",
   "week": {
-    "done": "A proposta de Tucson v2.0.1 foi publicada no portal em 25/11, com dois PDFs, duas imagens e três itens de aprovação. Os quatro arquivos foram conferidos por download autenticado.",
+    "done": "A proposta de Tucson v2.0.1 foi publicada no portal em 25/11, com dois PDFs, duas imagens e três itens de aprovação. Os quatro arquivos foram conferidos por download autenticado. A Terra Fértil já foi avisada de que os materiais estão no portal.",
     "blocked": "O teste depende das aprovações comerciais e técnicas da Terra Fértil e das definições de atendimento. A ligação entre cada anúncio e sua conversa no WhatsApp continua sem comprovação.",
-    "next": "Apresentar à Terra Fértil a proposta publicada e colher as confirmações necessárias. Preparar a campanha conforme as condições aprovadas para início em 7/12 ou 5/01. Dar continuidade à análise da conta e ao levantamento das evidências de origem."
+    "next": "Acompanhar a validação da proposta no portal e concluir as definições de atendimento. Após as aprovações, preparar e conferir a campanha para início em 7/12 ou 5/01, conforme as condições propostas. Prosseguir com as verificações complementares da origem das conversas."
   },
   "campaigns": {
-    "status": "Proposta publicada; teste não iniciado",
+    "status": "Aguardando validação da Terra Fértil",
     "tone": "andamento",
     "intro": "A proposta do teste de 30 dias para Tucson, em duas regiões e com destino à conversa no WhatsApp, está disponível no portal. As datas propostas de início são 7/12 ou 5/01, condicionadas às aprovações e à preparação da campanha.",
     "steps": [
       {
-        "title": "Apresentação e validação",
-        "detail": "Conferir proposta, regiões, orçamento, início, textos e artes. Para início em 7/12, as aprovações estão previstas até 1/12; para 5/01, até 18/12. Os textos precisam da validação do responsável técnico."
+        "title": "Validação da proposta",
+        "detail": "A Terra Fértil já foi avisada da disponibilidade no portal. Validar regiões, orçamento, distribuição da verba, início, textos e artes. Para início em 7/12, aprovações até 1/12; para 5/01, até 18/12. Os textos precisam da validação do responsável técnico."
       },
       {
         "title": "Preparação do teste",
@@ -90,35 +90,35 @@
     {
       "title": "Validar regiões, orçamento, distribuição da verba e data de início",
       "owner": "Terra Fértil · Comercial",
-      "asked": "A confirmar na apresentação da proposta",
+      "asked": "Aguardando validação no portal",
       "purpose": "Definir as condições para a montagem do teste.",
       "status": "A validar"
     },
     {
       "title": "Definir o atendimento das conversas de cada região",
       "owner": "Terra Fértil · Comercial",
-      "asked": "A confirmar na apresentação da proposta",
+      "asked": "A confirmar com a Terra Fértil",
       "purpose": "Combinar responsáveis, tempo de resposta e atendimento fora do horário.",
       "status": "A validar"
     },
     {
       "title": "Validar os textos e confirmar o uso das artes",
       "owner": "Terra Fértil · Comercial e responsável técnico",
-      "asked": "A confirmar na apresentação da proposta",
+      "asked": "Aguardando validação no portal",
       "purpose": "Revisar os textos com o responsável técnico e confirmar os materiais que poderão ser usados.",
       "status": "A validar"
     },
     {
       "title": "Confirmar os recortes da planilha usados na proposta de regiões",
       "owner": "Terra Fértil · Comercial",
-      "asked": "A confirmar na apresentação da proposta",
+      "asked": "A confirmar com a Terra Fértil",
       "purpose": "Conferir a identificação de um município e os períodos da planilha antes do fechamento da montagem.",
       "status": "A validar"
     },
     {
       "title": "Combinar o registro de conversas e vendas durante o teste",
       "owner": "Terra Fértil · Comercial",
-      "asked": "A confirmar na apresentação da proposta",
+      "asked": "A confirmar com a Terra Fértil",
       "purpose": "Definir quem registra e envia as informações necessárias à avaliação, sem dados pessoais de compradores.",
       "status": "A validar"
     },
@@ -132,9 +132,9 @@
   ],
   "deliveries": [
     {
-      "title": "Apresentação da proposta e materiais do teste de Tucson",
-      "date": "25/11/2026",
-      "status": "Em preparação",
+      "title": "Proposta e materiais do teste de Tucson",
+      "date": "Publicada no portal em 25/11/2026",
+      "status": "Entregue",
       "link": "https://portal-terrafertil.reguaops.lat/entrada"
     },
     {
