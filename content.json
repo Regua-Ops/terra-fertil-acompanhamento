@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "referenceDate": "2026-11-26",
-  "summary": "A proposta do teste de Tucson, versão 2.0.1, está no portal e a Terra Fértil já foi avisada. Aguardamos a validação de regiões, orçamento e distribuição da verba, início, textos e artes. Datas propostas: 7/12 (aprovações até 1/12) ou 5/01 (aprovações até 18/12). A verificação da origem das conversas no WhatsApp segue em paralelo.",
+  "summary": "A proposta do teste de Tucson, versão 2.0.1, está no portal e aguarda validação da Terra Fértil. Após as aprovações, a Régua ativará manualmente a campanha, com início previsto para o mesmo dia. A verificação da origem das conversas no WhatsApp segue em paralelo.",
   "achievements": {
     "intro": "Trabalho acumulado e informações conferidas até 26/11/2026.",
     "items": [
@@ -48,7 +48,7 @@
     },
     {
       "title": "Proposta aguardando validação da Terra Fértil",
-      "detail": "A proposta do teste de Tucson está disponível no portal. Aguardamos a validação das regiões, orçamento e distribuição da verba, data de início, textos e artes.",
+      "detail": "A proposta do teste de Tucson está disponível no portal. Aguardamos a validação das regiões, orçamento e distribuição da verba, condições de início, textos e artes.",
       "current": true
     },
     {
@@ -64,16 +64,16 @@
   "week": {
     "done": "A proposta de Tucson v2.0.1 foi publicada no portal em 25/11, com dois PDFs, duas imagens e três itens de aprovação. Os quatro arquivos foram conferidos por download autenticado. A Terra Fértil já foi avisada de que os materiais estão no portal.",
     "blocked": "O teste depende das aprovações comerciais e técnicas da Terra Fértil e das definições de atendimento. A ligação entre cada anúncio e sua conversa no WhatsApp continua sem comprovação.",
-    "next": "Acompanhar a validação da proposta no portal e concluir as definições de atendimento. Após as aprovações, preparar e conferir a campanha para início em 7/12 ou 5/01, conforme as condições propostas. Prosseguir com as verificações complementares da origem das conversas."
+    "next": "Acompanhar a validação da proposta no portal e concluir as definições de atendimento. Após as aprovações, preparar, conferir e ativar manualmente a campanha, com início previsto para o mesmo dia. Prosseguir com as verificações complementares da origem das conversas."
   },
   "campaigns": {
     "status": "Aguardando validação da Terra Fértil",
     "tone": "andamento",
-    "intro": "A proposta do teste de 30 dias para Tucson, em duas regiões e com destino à conversa no WhatsApp, está disponível no portal. As datas propostas de início são 7/12 ou 5/01, condicionadas às aprovações e à preparação da campanha.",
+    "intro": "A proposta do teste de 30 dias para Tucson, em duas regiões e com destino à conversa no WhatsApp, está disponível no portal. A ativação será manual pela Régua, com início previsto para o mesmo dia da conclusão das aprovações.",
     "steps": [
       {
         "title": "Validação da proposta",
-        "detail": "A Terra Fértil já foi avisada da disponibilidade no portal. Validar regiões, orçamento, distribuição da verba, início, textos e artes. Para início em 7/12, aprovações até 1/12; para 5/01, até 18/12. Os textos precisam da validação do responsável técnico."
+        "detail": "A Terra Fértil já foi avisada da disponibilidade no portal. Validar regiões, orçamento, distribuição da verba, condições de início, textos e artes. Os textos precisam da validação do responsável técnico."
       },
       {
         "title": "Preparação do teste",
@@ -84,11 +84,11 @@
         "detail": "O planejamento prevê primeiro boletim no dia 14 e decisão no dia 30, contados a partir do início efetivo do teste."
       }
     ],
-    "condition": "Início proposto em 7/12 com aprovações até 1/12, ou em 5/01 com aprovações até 18/12. A Régua confirma o lançamento após as aprovações e a conferência da campanha."
+    "condition": "Após a conclusão das aprovações, a Régua ativará manualmente a campanha, com início previsto para o mesmo dia."
   },
   "dependencies": [
     {
-      "title": "Validar regiões, orçamento, distribuição da verba e data de início",
+      "title": "Validar regiões, orçamento, distribuição da verba e condições de início",
       "owner": "Terra Fértil · Comercial",
       "asked": "Aguardando validação no portal",
       "purpose": "Definir as condições para a montagem do teste.",
